@@ -10,7 +10,8 @@ package com.microtripit.mandrillapp.lutung.model;
  * @since Mar 18, 2013
  */
 public final class MandrillContentWrapper {
-	private String name, content;
+	private String name;
+	private Object content;
 
 	/**
 	 * @return the name
@@ -29,19 +30,19 @@ public final class MandrillContentWrapper {
 	/**
 	 * @return the content
 	 */
-	public final String getContent() {
+	public final Object getContent() {
 		return content;
 	}
 
 	/**
 	 * @param content the content to set
 	 */
-	public final void setContent(final String content) {
+	public final void setContent(final Object content) {
 		this.content = content;
 	}
 	
 	public static final MandrillContentWrapper create(
-			final String name, final String content) {
+			final String name, final Object content) {
 		
 		final MandrillContentWrapper w = new MandrillContentWrapper();
 		w.setName(name);

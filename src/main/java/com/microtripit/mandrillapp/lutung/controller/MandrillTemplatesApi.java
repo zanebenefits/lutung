@@ -239,7 +239,7 @@ public class MandrillTemplatesApi {
 	 */
 	public String render(final String name, 
 			final Map<String,String> templateContent, 
-			final Map<String,String> mergeVars) 
+			final Map<String,Object> mergeVars)
 					throws MandrillApiError, IOException {
 		
 		final HashMap<String,Object> params = MandrillUtil.paramsWithKey(key);

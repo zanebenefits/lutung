@@ -167,7 +167,7 @@ public final class MandrillTemplatesApiTest extends MandrillTestCase {
 		
 		mandrillApi.templates().render(
 				null, 
-				new HashMap<String,String>(), 
+				new HashMap<String, String>(),
 				null);
 		Assert.fail();
 		
@@ -188,9 +188,9 @@ public final class MandrillTemplatesApiTest extends MandrillTestCase {
 		MandrillTemplate t = mandrillApi.templates().add(templateName, 
 				code, false);
 		Assert.assertNotNull(t);
-		final HashMap<String, String> content = new HashMap<String,String>();
+		final HashMap<String, String> content = new HashMap<String, String>();
 		content.put("editable", "<div>foo *|MERGE2|*</div>");
-		final HashMap<String, String> mergeVars = new HashMap<String, String>();
+		final HashMap<String, Object> mergeVars = new HashMap<String, Object>();
 		mergeVars.put("merge1", "Lutung");
 		mergeVars.put("merge2", "bar");
 		final String rendered = mandrillApi.templates().render(

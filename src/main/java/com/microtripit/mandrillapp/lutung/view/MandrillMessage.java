@@ -31,6 +31,7 @@ public class MandrillMessage {
 	private List<RecipientMetadata> recipient_metadata;
 	private List<MessageContent> attachments;
 	private List<MessageContent> images;
+  private String merge_language;
 	// following params are send-only
 	
 	
@@ -563,9 +564,16 @@ public class MandrillMessage {
 		this.recipient_metadata = recipientMetadata;
 	}
 
-	
+  public String getMerge_language() {
+    return merge_language;
+  }
 
-	/**
+  public void setMerge_language(String merge_language) {
+    this.merge_language = merge_language;
+  }
+
+
+  /**
 	 * <p>A single recipient's information.</p>
 	 * @author rschreijer
 	 * @since Mar 16, 2013
